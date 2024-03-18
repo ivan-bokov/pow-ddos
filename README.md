@@ -1,4 +1,4 @@
-This project is a solution for some interview question on Golang.
+# (!) This project is a solution for some interview question on Golang.
 ## 1. Description
 Design and implement "Word of Wisdom" tcp server:
 
