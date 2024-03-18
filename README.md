@@ -8,7 +8,7 @@ Design and implement "Word of Wisdom" tcp server:
 * Docker file should be provided both for the server and for the client that solves the POW challenge.
 
 ## 2. Getting started
-## 
+
 * [Go 1.19+](https://go.dev/dl/) installed (to run tests, start server or client without Docker)
 * [Docker](https://docs.docker.com/engine/install/) installed (to run docker-compose)
 * Environment file `.env` (see example in [.env.example](.env.example))
