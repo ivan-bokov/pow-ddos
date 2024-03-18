@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: .deploy/server.Dockerfile
+    ports:
+      - '8000:8000'
+    restart: 'no'
+    networks:
+      - pow-ddos
+
+  client:
+    build:
+      context: .
+      dockerfile: .deploy/client.Dockerfile
+    restart: 'no'
+    entrypoint:
+      - /word-of-wisdom-cli
+      - --count=500
+      - --host=server:8000
+    depends_on:
+      - server
+    networks:
+      - pow-ddos
+networks:
+  pow-ddos:
+    driver: bridge
