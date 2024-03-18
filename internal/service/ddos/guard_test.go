@@ -10,6 +10,7 @@ func TestTakeWithinWindow(t *testing.T) {
 		window:   time.Second,
 		lastTime: time.Now(),
 		rate:     0,
+		stepRate: 10,
 	}
 	g.Take()
 	if g.rate != 1 {
@@ -22,6 +23,7 @@ func TestTakeOutsideWindow(t *testing.T) {
 		window:   time.Second,
 		lastTime: time.Now().Add(-2 * time.Second),
 		rate:     5,
+		stepRate: 10,
 	}
 	g.Take()
 	if g.rate != 1 {
@@ -37,6 +39,7 @@ func TestReset(t *testing.T) {
 		window:   time.Second,
 		lastTime: time.Now().Add(-2 * time.Second),
 		rate:     5,
+		stepRate: 10,
 	}
 	g.Take()
 	g.Reset()
@@ -50,6 +53,7 @@ func TestRate(t *testing.T) {
 		window:   time.Second,
 		lastTime: time.Now().Add(-2 * time.Second),
 		rate:     5,
+		stepRate: 10,
 	}
 	g.Take()
 	rate := g.Rate()

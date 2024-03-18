@@ -56,7 +56,7 @@ func TestHashCash_Calculate(t *testing.T) {
 	}
 	type args struct {
 		challenge  []byte
-		difficulty int
+		difficulty uint8
 	}
 	tests := []struct {
 		name    string
