@@ -41,7 +41,7 @@ The concept behind Proof of Work for DDoS protection is that a client requesting
 
 By complicating access to server requests for the client to such an extent, abuse through mass requests will become fundamentally unprofitable.
 
-# 4.1 Choice of an algorithm 
+### 4.1 Choice of an algorithm 
 I have selected the Hashcash algorithm for its following advantages:
 + simplicity of implementation
 + lots of documentation and articles with description
